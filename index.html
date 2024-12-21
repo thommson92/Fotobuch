@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passwortgeschützter Bereich</title>
+  <!-- Bootstrap CSS einbinden -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Eigenes Styling -->
+  <style>
+    body {
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 500px;
+      margin-top: 100px;
+    }
+    .form-control {
+      font-size: 1.2rem;
+    }
+    .alert {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="text-center">Passwortgeschützter Bereich</h2>
+    <p class="text-center">Bitte gib das Passwort ein, um auf das digitale Fotobuch zuzugreifen:</p>
+
+    <!-- Passwort-Eingabeformular -->
+    <div class="alert alert-danger" id="error-message" role="alert">
+      Falsches Passwort. Bitte versuche es erneut.
+    </div>
+
+    <form id="passwordForm">
+      <div class="mb-3">
+        <label for="password" class="form-label">Passwort</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Ansehen</button>
+    </form>
+  </div>
+
+  <script>
+    // Definiere das Passwort
+    const correctPassword = "Resi2024"; // Ändere dieses Passwort!
+
+    // Zugriff auf das Passwortformular und Fehlernachricht
+    const passwordForm = document.getElementById('passwordForm');
+    const passwordInput = document.getElementById('password');
+    const errorMessage = document.getElementById('error-message');
+
+    // Funktion zur Passwortüberprüfung
+    passwordForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Verhindert das Standardformularverhalten
+
+      const enteredPassword = passwordInput.value;
+
+      // Überprüfe das eingegebene Passwort
+      if (enteredPassword === correctPassword) {
+        // Weiterleitung zur Fotobuch-Seite bei korrektem Passwort
+        window.location.href = "fotobuch.html"; // Diese Seite sollte das Fotobuch enthalten
+      } else {
+        // Zeige Fehlermeldung bei falschem Passwort
+        errorMessage.style.display = 'block';
+      }
+
+      // Leere das Passwortfeld nach der Überprüfung
+      passwordInput.value = '';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitales Fotobuch: USA & Kanada 2024</title>
+  <!-- Bootstrap CSS einbinden -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional: Eigenes Styling -->
+  <style>
+    body {
+      background-color: #f4f4f4;
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+    }
+    .photo-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 40px 0;
+      color: #343a40;
+    }
+    .description {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Bereich -->
+  <header class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h1>USA & Kanada 2024 - Ein digitales Fotobuch</h1>
+      <p class="lead">Unvergessliche Momente von unserem Roadtrip durch Nordamerika.</p>
+    </div>
+  </header>
+
+  <!-- Fotogalerie / Karussell -->
+  <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Fotos/IMG_9047.JPEG" class="d-block w-100" alt="Bild 1">
+        <div class="photo-caption">Banff - Türkisblaue Seen</div>
+      </div>
+      <div class="carousel-item">
+        <img src="./Fotos/IMG_1297.JPEG" class="d-block w-100" alt="Bild 2">
+        <div class="photo-caption">Florenz - Blick auf den Arno-Fluss</div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x500" class="d-block w-100" alt="Bild 3">
+        <div class="photo-caption">Venedig - Gondelfahrt bei Nacht</div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Vorherige</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Nächste</span>
+    </button>
+  </div>
+
+  <!-- Reiseabschnitte -->
+  <div class="container">
+    
+    <!-- Rom -->
+    <section class="my-5">
+      <h2 class="section-title">Rom - Die Ewige Stadt</h2>
+      <p class="description">Unsere Reise begann in Rom, der Hauptstadt Italiens, bekannt für ihre historischen Sehenswürdigkeiten und eindrucksvolle Architektur.</p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Rom 1">
+          <p class="text-center mt-2">Kolosseum im Morgengrauen</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Rom 2">
+          <p class="text-center mt-2">Petersdom und Vatikanstadt</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Florenz -->
+    <section class="my-5">
+      <h2 class="section-title">Florenz - Zentrum der Kunst</h2>
+      <p class="description">Florenz, die Wiege der italienischen Renaissance, beeindruckte uns mit seinen Kunstwerken und historischen Gebäuden.</p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Florenz 1">
+          <p class="text-center mt-2">Blick auf den Dom von Florenz</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Florenz 2">
+          <p class="text-center mt-2">Uffizien-Galerie</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venedig -->
+    <section class="my-5">
+      <h2 class="section-title">Venedig - Die Stadt der Kanäle</h2>
+      <p class="description">In Venedig genossen wir romantische Gondelfahrten und die malerischen Kanäle der einzigartigen Lagunenstadt.</p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Venedig 1">
+          <p class="text-center mt-2">Der Canal Grande bei Sonnenuntergang</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Venedig 2">
+          <p class="text-center mt-2">Markusplatz und die Basilika</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 T. Kellner</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS und Popper.js einbinden -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
